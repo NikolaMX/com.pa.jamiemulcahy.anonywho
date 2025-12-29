@@ -8,10 +8,10 @@
 - [x] Define shared utilities (animal list, shuffle function, hash function)
 
 ### 1.2 Name Anonymization
-- [ ] Implement animal alias assignment system (from AAM)
-- [ ] Hook `live_game_players.js` to replace player names
-- [ ] Hook `live_game_devmode.js` to anonymize sandbox viewer
-- [ ] Preserve real names for spectators and self
+- [x] Implement animal alias assignment system (from AAM)
+- [x] Hook `live_game_players.js` to replace player names
+- [x] Hook `live_game_devmode.js` to anonymize sandbox viewer
+- [x] Preserve real names for spectators and self
 
 ## Phase 2: Information Leak Fixes
 

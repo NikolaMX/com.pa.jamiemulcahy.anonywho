@@ -36,6 +36,27 @@ Spectators can see real names alongside aliases.
 - Works with all factions: MLA, Legion, Exiles
 - Compatible with most UI mods
 
+## Development Setup
+
+### VS Code Configuration
+
+To sync the mod to your PA mods folder, add this to your **VS Code User Settings** (Ctrl+Shift+P → "Preferences: Open User Settings (JSON)"):
+
+```json
+{
+  "anonywho.paModsPath": "C:\\Users\\YourName\\AppData\\Local\\Uber Entertainment\\Planetary Annihilation Titans\\mods"
+}
+```
+
+Common paths:
+- **Windows**: `C:\Users\YourName\AppData\Local\Uber Entertainment\Planetary Annihilation Titans\mods`
+- **Linux**: `~/.local/Uber Entertainment/Planetary Annihilation Titans/mods`
+- **macOS**: `~/Library/Application Support/Uber Entertainment/Planetary Annihilation Titans/mods`
+
+### Syncing to Game
+
+Run the **"Sync mod to PA"** task (Ctrl+Shift+B or Terminal → Run Task) to copy mod files to your PA installation.
+
 ## Credits
 
 This mod combines and improves upon:
