@@ -1,0 +1,20 @@
+{
+  "identifier": "com.anonywho.mod",
+  "context": "client",
+  "version": "1.0.0",
+  "display_name": "Anonywho",
+  "description": "Anonymous mode - hides player names with animal aliases",
+  "author": "anonywho",
+  "signature": "not yet implemented",
+  "priority": 100,
+  "scenes": {
+    "live_game_players": [
+      "coui://ui/mods/anonywho/shared.js",
+      "coui://ui/mods/anonywho/live_game_players.js"
+    ],
+    "live_game_devmode": [
+      "coui://ui/mods/anonywho/shared.js",
+      "coui://ui/mods/anonywho/live_game_devmode.js"
+    ]
+  }
+}
