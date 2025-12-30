@@ -26,16 +26,36 @@
     var sortedPlayersArrayValue = model.sortedPlayersArray;
     model.sortedPlayersArray = ko.computed(function () {
         var teams = sortedPlayersArrayValue();
+        var myId = model.orginalArmyId();
+
         // Shuffle players within each team
         _.forEach(teams, function (players) {
             players.sort(function (a, b) {
                 return anonywho.hash(b.id) - anonywho.hash(a.id);
             });
         });
-        // Shuffle team order
-        teams.sort(function (a, b) {
+
+        // Find player's team and separate it from others
+        var myTeam = null;
+        var otherTeams = [];
+        _.forEach(teams, function (team) {
+            var isMyTeam = _.some(team, function (player) {
+                return player.id === myId;
+            });
+            if (isMyTeam) {
+                myTeam = team;
+            } else {
+                otherTeams.push(team);
+            }
+        });
+
+        // Shuffle other teams
+        otherTeams.sort(function (a, b) {
             return anonywho.hash(b[0].id) - anonywho.hash(a[0].id);
         });
-        return teams;
+
+        // Put player's team first, then shuffled others
+        var result = myTeam ? [myTeam].concat(otherTeams) : otherTeams;
+        return result;
     });
 })();

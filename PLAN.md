@@ -47,9 +47,9 @@
 ## Phase 4: Polish
 
 ### 4.1 Player Order Shuffling
-- [ ] Implement consistent hash-based ordering
-- [ ] Shuffle within teams
-- [ ] Shuffle team order (player's team always first)
+- [x] Implement consistent hash-based ordering
+- [x] Shuffle within teams
+- [x] Shuffle team order (player's team always first)
 
 ### 4.2 Edge Cases
 - [ ] Test with AI players
