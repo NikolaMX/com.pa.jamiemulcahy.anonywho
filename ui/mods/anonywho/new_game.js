@@ -48,33 +48,44 @@
         }
     };
 
-    // Hide other players' commanders in lobby
-    var wrapSlotCommanders = function () {
-        var armies = model.armies();
-        _.forEach(armies, function (army) {
-            _.forEach(army.slots(), function (slot) {
-                if (slot._anonywhoCommanderWrapped) return;
-                slot._anonywhoCommanderWrapped = true;
+    // Hide other players' commander images via CSS
+    // We hide all commander images, then show current player's via class
+    var injectCommanderHidingCSS = function () {
+        if (document.getElementById('anonywho-css')) return;
+        var style = document.createElement('style');
+        style.id = 'anonywho-css';
+        style.textContent =
+            // Hide all commander images by default
+            '.slot-player-commander .profile-commander { visibility: hidden; }' +
+            // Show for slots marked as current player
+            '.anonywho-my-slot .slot-player-commander .profile-commander { visibility: visible; }' +
+            // Show for AI slots (they have ai-commander class)
+            '.ai-commander .profile-commander { visibility: visible; }';
+        document.head.appendChild(style);
+    };
 
-                var originalCommander = slot.commander;
-                slot.commander = ko.pureComputed({
-                    read: function () {
-                        // Show real commander for current player and spectators
-                        if (slot.containsThisPlayer() || model.isSpectator()) {
-                            return originalCommander();
-                        }
-                        return null; // Hidden for others
-                    },
-                    write: function (value) {
-                        originalCommander(value);
-                    }
-                });
-            });
+    // Mark current player's slot element so CSS can show their commander
+    var markCurrentPlayerSlot = function () {
+        // Remove old marks
+        $('.anonywho-my-slot').removeClass('anonywho-my-slot');
+
+        // Find and mark current player's slot
+        var slot = getThisPlayerSlot();
+        if (!slot) return;
+
+        // Find the slot's DOM element by matching player name
+        var playerName = slot.playerName();
+        $('.slot-player-text.truncate').each(function () {
+            if ($(this).text() === playerName) {
+                $(this).closest('.slot-player').addClass('anonywho-my-slot');
+            }
         });
     };
 
     // Hook handlers.players to randomize color when player list updates
     $(document).ready(function () {
+        injectCommanderHidingCSS();
+
         var originalHandler = handlers.players;
         handlers.players = function (payload, force) {
             originalHandler.apply(handlers, arguments);
@@ -82,12 +93,21 @@
             if (slot) {
                 setPreferredColor(slot);
             }
+            // Re-mark current player's slot after DOM updates
+            setTimeout(markCurrentPlayerSlot, 50);
         };
 
-        // Initial wrap and re-wrap when armies change
-        wrapSlotCommanders();
-        model.armies.subscribe(wrapSlotCommanders);
+        // Initial mark
+        setTimeout(markCurrentPlayerSlot, 100);
+
+        // Re-mark when armies change
+        model.armies.subscribe(function () {
+            setTimeout(markCurrentPlayerSlot, 50);
+        });
     });
+
+    // Remove color picker UI (colors are randomized)
+    $('.color-picker-combo').remove();
 
     // Disable the "Favourite Colour" mod to prevent color conflicts
     Object.defineProperty(model, 'dFavouriteColour_enabled', {

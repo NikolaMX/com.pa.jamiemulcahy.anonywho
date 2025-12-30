@@ -40,9 +40,9 @@
 
 ### 3.2 Commander Selection
 - [x] Research commander selection data flow
-- [x] Implement hidden commander in lobby (wrap slot.commander())
-- [x] All factions work - players pick freely, others see placeholder
-- [x] Real commanders revealed at game start (cinematic)
+- [ ] Implement hidden commander in lobby (deferred - breaks UI bindings)
+- Note: Wrapping slot.commander() breaks CSS bindings that depend on it
+- Note: Needs alternative approach (CSS hiding or DOM manipulation)
 
 ## Phase 4: Polish
 
