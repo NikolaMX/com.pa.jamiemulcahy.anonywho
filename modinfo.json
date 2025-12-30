@@ -22,6 +22,10 @@
     "live_game_unit_alert": [
       "coui://ui/mods/anonywho/shared.js",
       "coui://ui/mods/anonywho/live_game_unit_alert.js"
+    ],
+    "new_game_cinematic": [
+      "coui://ui/mods/anonywho/shared.js",
+      "coui://ui/mods/anonywho/new_game_cinematic.js"
     ]
   }
 }

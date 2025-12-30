@@ -26,9 +26,9 @@
 - [x] Test all alert scenarios
 
 ### 2.3 Cinematic Anonymization
-- [ ] Hook `new_game_cinematic.js` to hide names during intro
-- [ ] Shuffle player/team display order
-- [ ] Hide colors during cinematic
+- [x] Hook `new_game_cinematic.js` to hide names during intro
+- [x] Shuffle player/team display order
+- [x] Hide colors during cinematic
 
 ## Phase 3: Lobby Features
 
