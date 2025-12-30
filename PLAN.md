@@ -33,9 +33,9 @@
 ## Phase 3: Lobby Features
 
 ### 3.1 Color Handling
-- [ ] Hook `new_game.js` for lobby color masking
-- [ ] Decide: random assignment vs hidden (white)
-- [ ] Allow player to see their own color
+- [x] Hook `new_game.js` for lobby color randomization
+- [x] Decided: random assignment from 10-color palette (Masquerade style)
+- [x] Player sees their own randomized color (same as others see)
 - [ ] Test color assignment persistence
 
 ### 3.2 Commander Selection (Stretch Goal)

@@ -32,10 +32,25 @@
         return y;
     }
 
+    // Preferred color palette for randomization (from Masquerade)
+    var preferredColors = [
+        "rgb(151,251,152)", // Pale Green
+        "rgb(219,217,37)",  // Bitter Lemon
+        "rgb(255,144,47)",  // Neon Carrot
+        "rgb(210,50,44)",   // Persian Red
+        "rgb(206,51,122)",  // Medium Red Violet
+        "rgb(128,0,128)",   // Purple
+        "rgb(100,149,237)", // Cornflower Blue
+        "rgb(200,200,200)", // Silver
+        "rgb(70,70,70)",    // Charcoal
+        "rgb(128,0,0)",     // Maroon
+    ];
+
     // Global namespace for anonywho utilities
     window.anonywho = {
         animals: animals,
         hash: hash,
+        preferredColors: preferredColors,
         getAnimalAlias: function (playerId) {
             return animals[playerId % animals.length];
         }

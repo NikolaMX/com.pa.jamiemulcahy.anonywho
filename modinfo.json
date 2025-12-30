@@ -8,6 +8,10 @@
   "signature": "not yet implemented",
   "priority": 100,
   "scenes": {
+    "new_game": [
+      "coui://ui/mods/anonywho/shared.js",
+      "coui://ui/mods/anonywho/new_game.js"
+    ],
     "live_game_players": [
       "coui://ui/mods/anonywho/shared.js",
       "coui://ui/mods/anonywho/live_game_players.js"
