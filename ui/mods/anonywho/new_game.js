@@ -48,6 +48,31 @@
         }
     };
 
+    // Hide other players' commanders in lobby
+    var wrapSlotCommanders = function () {
+        var armies = model.armies();
+        _.forEach(armies, function (army) {
+            _.forEach(army.slots(), function (slot) {
+                if (slot._anonywhoCommanderWrapped) return;
+                slot._anonywhoCommanderWrapped = true;
+
+                var originalCommander = slot.commander;
+                slot.commander = ko.pureComputed({
+                    read: function () {
+                        // Show real commander for current player and spectators
+                        if (slot.containsThisPlayer() || model.isSpectator()) {
+                            return originalCommander();
+                        }
+                        return null; // Hidden for others
+                    },
+                    write: function (value) {
+                        originalCommander(value);
+                    }
+                });
+            });
+        });
+    };
+
     // Hook handlers.players to randomize color when player list updates
     $(document).ready(function () {
         var originalHandler = handlers.players;
@@ -58,5 +83,9 @@
                 setPreferredColor(slot);
             }
         };
+
+        // Initial wrap and re-wrap when armies change
+        wrapSlotCommanders();
+        model.armies.subscribe(wrapSlotCommanders);
     });
 })();

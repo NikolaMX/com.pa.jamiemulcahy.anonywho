@@ -38,11 +38,11 @@
 - [x] Player sees their own randomized color (same as others see)
 - [ ] Test color assignment persistence
 
-### 3.2 Commander Selection (Stretch Goal)
-- [ ] Research commander selection data flow
-- [ ] Implement hidden commander picker
-- [ ] Ensure all factions work (MLA, Legion, Exiles)
-- [ ] Handle commanders with different stats (Exiles)
+### 3.2 Commander Selection
+- [x] Research commander selection data flow
+- [x] Implement hidden commander in lobby (wrap slot.commander())
+- [x] All factions work - players pick freely, others see placeholder
+- [x] Real commanders revealed at game start (cinematic)
 
 ## Phase 4: Polish
 
