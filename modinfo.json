@@ -18,6 +18,10 @@
     ],
     "live_game_chat": [
       "coui://ui/mods/anonywho/live_game_chat.js"
+    ],
+    "live_game_unit_alert": [
+      "coui://ui/mods/anonywho/shared.js",
+      "coui://ui/mods/anonywho/live_game_unit_alert.js"
     ]
   }
 }

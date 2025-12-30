@@ -21,9 +21,9 @@
 - [x] Test with various chat message types
 
 ### 2.2 Alert Anonymization
-- [ ] Hook `live_game_unit_alert.js` for defeat messages
-- [ ] Identify and hook system alerts (disconnect/reconnect)
-- [ ] Test all alert scenarios
+- [x] Hook `live_game_unit_alert.js` for defeat messages
+- [x] Identify and hook system alerts (disconnect/reconnect)
+- [x] Test all alert scenarios
 
 ### 2.3 Cinematic Anonymization
 - [ ] Hook `new_game_cinematic.js` to hide names during intro
