@@ -40,9 +40,10 @@
 
 ### 3.2 Commander Selection
 - [x] Research commander selection data flow
-- [ ] Implement hidden commander in lobby (deferred - breaks UI bindings)
-- Note: Wrapping slot.commander() breaks CSS bindings that depend on it
-- Note: Needs alternative approach (CSS hiding or DOM manipulation)
+- [x] Implement hidden commander in lobby (CSS-based approach)
+- [x] Player can see and pick their own commander
+- [x] Other human players' commanders hidden
+- [x] AI commanders visible (no anonymity benefit, host needs to manage)
 
 ## Phase 4: Polish
 
