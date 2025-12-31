@@ -1,13 +1,13 @@
 {
-  "identifier": "com.anonywho.mod",
+  "identifier": "com.pa.jamiemulcahy.anonywho",
   "context": "server",
   "dependencies": [
     "com.pa.domdom.color_chat"
   ],
-  "version": "1.0.0",
+  "version": "0.0.1",
   "display_name": "Anonywho",
-  "description": "Anonymous mode - hides player names with animal aliases",
-  "author": "anonywho",
+  "description": "A comprehensive anonymity mod for competitive and casual play that hides player identities behind anonymised aliases to prevent metagaming. Features include chat and system alert anonymization (disconnect/reconnect messages), devmode viewer anonymization, and hidden commander selection in the lobby. Works with all factions including Legion and Exiles. Based on and inspired by Masquerade (com.pa.n30n.masquerade) and Anonymous Army Mod (net.teamfruit.pa.anonymous-mod).",
+  "author": "jamiemulcahy",
   "signature": "not yet implemented",
   "priority": 100,
   "scenes": {
