@@ -1,39 +1,44 @@
 {
   "identifier": "com.pa.jamiemulcahy.anonywho",
-  "context": "server",
+  "context": "client",
   "dependencies": [
     "com.pa.domdom.color_chat"
   ],
   "version": "0.0.1",
+  "build": "124610",
+  "date": "2026-01-02",
   "display_name": "Anonywho",
   "description": "A comprehensive anonymity mod for competitive and casual play that hides player identities behind anonymised aliases to prevent metagaming. Features include chat and system alert anonymization (disconnect/reconnect messages), devmode viewer anonymization, and hidden commander selection in the lobby. Works with all factions including Legion and Exiles. Based on and inspired by Masquerade (com.pa.n30n.masquerade) and Anonymous Army Mod (net.teamfruit.pa.anonymous-mod).",
   "author": "jamiemulcahy",
+  "forum": "https://github.com/jamiemulcahy/com.pa.jamiemulcahy.anonywho/issues",
+  "github": "https://github.com/jamiemulcahy/com.pa.jamiemulcahy.anonywho",
+  "category": ["ui", "lobby", "gameplay"],
   "signature": "not yet implemented",
   "priority": 100,
   "scenes": {
     "new_game": [
-      "coui://ui/mods/anonywho/shared.js",
-      "coui://ui/mods/anonywho/new_game.js",
-      "coui://ui/mods/anonywho/new_game.css"
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/new_game.js",
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/new_game.css"
     ],
     "live_game_players": [
-      "coui://ui/mods/anonywho/shared.js",
-      "coui://ui/mods/anonywho/live_game_players.js"
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_players.js"
     ],
     "live_game_devmode": [
-      "coui://ui/mods/anonywho/shared.js",
-      "coui://ui/mods/anonywho/live_game_devmode.js"
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_devmode.js"
     ],
     "live_game_chat": [
-      "coui://ui/mods/anonywho/live_game_chat.js"
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_chat.js"
     ],
     "live_game_unit_alert": [
-      "coui://ui/mods/anonywho/shared.js",
-      "coui://ui/mods/anonywho/live_game_unit_alert.js"
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_unit_alert.js"
     ],
     "new_game_cinematic": [
-      "coui://ui/mods/anonywho/shared.js",
-      "coui://ui/mods/anonywho/new_game_cinematic.js"
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/new_game_cinematic.js"
     ]
   }
 }
