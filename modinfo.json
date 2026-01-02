@@ -10,7 +10,7 @@
   "display_name": "Anonywho",
   "description": "A comprehensive anonymity mod for competitive and casual play that hides player identities behind anonymised aliases to prevent metagaming. Features include chat and system alert anonymization (disconnect/reconnect messages), devmode viewer anonymization, and hidden commander selection in the lobby. Works with all factions including Legion and Exiles. Based on and inspired by Masquerade (com.pa.n30n.masquerade) and Anonymous Army Mod (net.teamfruit.pa.anonymous-mod).",
   "author": "jamiemulcahy",
-  "forum": "https://github.com/jamiemulcahy/com.pa.jamiemulcahy.anonywho/issues",
+  "forum": "https://github.com/jamiemulcahy/com.pa.jamiemulcahy.anonywho/discussions",
   "github": "https://github.com/jamiemulcahy/com.pa.jamiemulcahy.anonywho",
   "category": ["ui", "lobby", "gameplay"],
   "signature": "not yet implemented",
