@@ -8,7 +8,13 @@ param(
 
 $dest = Join-Path $DestPath "com.anonywho.mod"
 
-# Create destination if needed
+# Clean up old files first to handle renames/deletions
+if (Test-Path $dest) {
+    Remove-Item -Path $dest -Recurse -Force
+    Write-Host "Cleaned old destination" -ForegroundColor Yellow
+}
+
+# Create destination
 New-Item -ItemType Directory -Path $dest -Force | Out-Null
 
 # Copy modinfo.json
