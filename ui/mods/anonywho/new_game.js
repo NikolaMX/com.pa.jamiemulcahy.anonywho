@@ -104,10 +104,11 @@
         model.armies.subscribe(function () {
             setTimeout(markCurrentPlayerSlot, 50);
         });
-    });
 
-    // Remove color picker UI (colors are randomized)
-    $('.color-picker-combo').remove();
+        // Remove color picker UI (colors are randomized)
+        // Done inside document.ready to ensure DOM is loaded
+        $('.color-picker-combo').remove();
+    });
 
     // Disable the "Favourite Colour" mod to prevent color conflicts
     Object.defineProperty(model, 'dFavouriteColour_enabled', {

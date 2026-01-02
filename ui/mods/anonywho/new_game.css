@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* Hide the color picker combo which reveals faction via player color */
+/* Using visibility:hidden maintains layout, display:none removes it entirely */
+.color-picker-combo {
+    display: none !important;
+}
+
+/* Also hide the individual color swatches in case the container is restructured */
+.slot-color-primary,
+.slot-color-secondary {
+    display: none !important;
+}

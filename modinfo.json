@@ -13,7 +13,8 @@
   "scenes": {
     "new_game": [
       "coui://ui/mods/anonywho/shared.js",
-      "coui://ui/mods/anonywho/new_game.js"
+      "coui://ui/mods/anonywho/new_game.js",
+      "coui://ui/mods/anonywho/new_game.css"
     ],
     "live_game_players": [
       "coui://ui/mods/anonywho/shared.js",
