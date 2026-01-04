@@ -1,6 +1,6 @@
 {
   "identifier": "com.pa.jamiemulcahy.anonywho",
-  "context": "client",
+  "context": "server",
   "dependencies": [
     "com.pa.domdom.color_chat"
   ],
@@ -24,6 +24,9 @@
     "live_game_players": [
       "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
       "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_players.js"
+    ],
+    "live_game_planets": [
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_planets.js"
     ],
     "live_game_devmode": [
       "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
