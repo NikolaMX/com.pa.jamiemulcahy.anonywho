@@ -6,7 +6,7 @@ param(
     [string]$SrcPath
 )
 
-$dest = Join-Path $DestPath "com.anonywho.mod"
+$dest = Join-Path $DestPath "com.pa.jamiemulcahy.anonywho"
 
 # Clean up old files first to handle renames/deletions
 if (Test-Path $dest) {
